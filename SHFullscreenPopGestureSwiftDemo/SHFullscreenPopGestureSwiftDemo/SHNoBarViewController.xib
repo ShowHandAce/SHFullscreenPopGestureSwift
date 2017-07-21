@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SHNoBarViewController" customModule="SHFullscreenPopGestureSwiftDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDa-ku-z0u">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="667"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Y3s-mS-FfX"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This view controller's navigation bar is hidden and max allowed pop gesture initial distance is 200" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7Y-VH-8Fp">
+                    <rect key="frame" x="20" y="311.5" width="335" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="A0Y-Wm-AKU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWs-oE-Tou">
+                    <rect key="frame" x="143" y="267.5" width="88" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="6EJ-v1-lSZ"/>
+                        <constraint firstAttribute="width" constant="88" id="KtG-FD-aHy"/>
+                    </constraints>
+                    <state key="normal" title="Push"/>
+                    <connections>
+                        <action selector="pushButtonTouched:" destination="-1" eventType="touchUpInside" id="jrq-tT-Cc9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.87441724539999999" green="0.87456458810000004" blue="0.87439662220000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="c7Y-VH-8Fp" firstAttribute="top" secondItem="bWs-oE-Tou" secondAttribute="bottom" id="9Ij-uh-KZ4"/>
+                <constraint firstItem="yDa-ku-z0u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ILQ-dt-EMQ"/>
+                <constraint firstItem="c7Y-VH-8Fp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="O4s-rB-Bsc"/>
+                <constraint firstItem="bWs-oE-Tou" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Q4g-k9-jE1"/>
+                <constraint firstItem="bWs-oE-Tou" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-44" id="fAV-j8-iUr"/>
+                <constraint firstAttribute="trailing" secondItem="c7Y-VH-8Fp" secondAttribute="trailing" constant="20" id="p12-yt-hFE"/>
+                <constraint firstAttribute="bottom" secondItem="yDa-ku-z0u" secondAttribute="bottom" id="rwa-SD-wOx"/>
+                <constraint firstItem="yDa-ku-z0u" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ton-Y5-7GR"/>
+            </constraints>
+            <point key="canvasLocation" x="-57" y="55"/>
+        </view>
+    </objects>
+</document>

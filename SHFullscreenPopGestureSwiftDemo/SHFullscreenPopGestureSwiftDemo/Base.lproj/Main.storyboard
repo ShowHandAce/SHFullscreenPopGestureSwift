@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WUv-5K-ESJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SHFullscreenPopGestureSwift-->
+        <scene sceneID="UF1-eN-u6l">
+            <objects>
+                <tableViewController id="uFA-KM-M6k" customClass="ViewController" customModule="SHFullscreenPopGestureSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Wd-dP-qMK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="uFA-KM-M6k" id="8lx-RE-ExB"/>
+                            <outlet property="delegate" destination="uFA-KM-M6k" id="UTg-kb-PxB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SHFullscreenPopGestureSwift" id="Uaa-pe-iSe"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIV-4h-d3R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402" y="83"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DNe-Gm-F7C">
+            <objects>
+                <navigationController id="WUv-5K-ESJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bOc-uf-koY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uFA-KM-M6k" kind="relationship" relationship="rootViewController" id="Tui-oW-t62"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rY7-5N-qGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-298" y="84"/>
+        </scene>
+    </scenes>
+</document>

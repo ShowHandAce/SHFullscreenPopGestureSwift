@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SHNoGestureViewController" customModule="SHFullscreenPopGestureSwiftDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxu-Lg-A9Y">
+                    <rect key="frame" x="143.5" y="267.5" width="88" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="88" id="9CX-lz-JKf"/>
+                        <constraint firstAttribute="height" constant="44" id="Obc-Uz-kIu"/>
+                    </constraints>
+                    <state key="normal" title="Push"/>
+                    <connections>
+                        <action selector="pushButtonTouched:" destination="-1" eventType="touchUpInside" id="EXR-xq-QRC"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This view controller's pop gesture recogenizer is disabled" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahH-5q-dkz">
+                    <rect key="frame" x="20" y="311.5" width="335" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="ObT-5o-OhP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.87441724539999999" green="0.87456458810000004" blue="0.87439662220000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gxu-Lg-A9Y" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-44" id="6xQ-AY-I4W"/>
+                <constraint firstItem="gxu-Lg-A9Y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CXY-hN-3Hp"/>
+                <constraint firstItem="ahH-5q-dkz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="JRy-nV-L6n"/>
+                <constraint firstItem="ahH-5q-dkz" firstAttribute="top" secondItem="gxu-Lg-A9Y" secondAttribute="bottom" id="URR-fn-u7l"/>
+                <constraint firstAttribute="trailing" secondItem="ahH-5q-dkz" secondAttribute="trailing" constant="20" id="o7C-1m-yIP"/>
+            </constraints>
+            <point key="canvasLocation" x="-206" y="19"/>
+        </view>
+    </objects>
+</document>

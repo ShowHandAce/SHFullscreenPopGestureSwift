@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SHScrollViewController" customModule="SHFullscreenPopGestureSwiftDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="imgView" destination="1PX-Uf-Rlm" id="zk2-Ti-osw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHP-Je-0xY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1PX-Uf-Rlm">
+                            <rect key="frame" x="0.0" y="0.0" width="1000" height="2000"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1000" id="PvJ-bV-zU9"/>
+                                <constraint firstAttribute="height" constant="2000" id="Xm2-ar-k8V"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="1PX-Uf-Rlm" secondAttribute="bottom" id="G5P-w8-gZw"/>
+                        <constraint firstItem="1PX-Uf-Rlm" firstAttribute="leading" secondItem="fHP-Je-0xY" secondAttribute="leading" id="RFn-p8-w3x"/>
+                        <constraint firstAttribute="trailing" secondItem="1PX-Uf-Rlm" secondAttribute="trailing" id="Z3H-1I-bYW"/>
+                        <constraint firstItem="1PX-Uf-Rlm" firstAttribute="top" secondItem="fHP-Je-0xY" secondAttribute="top" id="rpF-lf-14G"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="sh_scrollViewPopGestureRecognizerEnable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fHP-Je-0xY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ch3-Z9-lRc"/>
+                <constraint firstItem="fHP-Je-0xY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hf1-29-smP"/>
+                <constraint firstAttribute="trailing" secondItem="fHP-Je-0xY" secondAttribute="trailing" id="OQR-ys-ZAl"/>
+                <constraint firstAttribute="bottom" secondItem="fHP-Je-0xY" secondAttribute="bottom" id="RbE-Kj-xUU"/>
+            </constraints>
+            <point key="canvasLocation" x="-337" y="38"/>
+        </view>
+    </objects>
+</document>

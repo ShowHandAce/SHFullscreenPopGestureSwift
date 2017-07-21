@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B93AE4CF1F20AE0F005084BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AE4CE1F20AE0F005084BD /* AppDelegate.swift */; };
+		B93AE4D11F20AE0F005084BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AE4D01F20AE0F005084BD /* ViewController.swift */; };
+		B93AE4D41F20AE0F005084BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93AE4D21F20AE0F005084BD /* Main.storyboard */; };
+		B93AE4D61F20AE10005084BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B93AE4D51F20AE0F005084BD /* Assets.xcassets */; };
+		B93AE4D91F20AE10005084BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93AE4D71F20AE10005084BD /* LaunchScreen.storyboard */; };
+		B93AE4E41F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AE4E31F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoTests.swift */; };
+		B93AE4EF1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AE4EE1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoUITests.swift */; };
+		B93AE4FE1F20AE60005084BD /* SHFullscreenPopGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AE4FD1F20AE60005084BD /* SHFullscreenPopGesture.swift */; };
+		B93AE5031F20B6A9005084BD /* SHAceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AE5011F20B6A9005084BD /* SHAceViewController.swift */; };
+		B93AE5041F20B6A9005084BD /* SHAceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93AE5021F20B6A9005084BD /* SHAceViewController.xib */; };
+		B93AE5071F20BB69005084BD /* SHNoBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AE5051F20BB69005084BD /* SHNoBarViewController.swift */; };
+		B93AE5081F20BB69005084BD /* SHNoBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93AE5061F20BB69005084BD /* SHNoBarViewController.xib */; };
+		B93AE50B1F219F0D005084BD /* SHNoGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AE5091F219F0D005084BD /* SHNoGestureViewController.swift */; };
+		B93AE50C1F219F0D005084BD /* SHNoGestureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93AE50A1F219F0D005084BD /* SHNoGestureViewController.xib */; };
+		B93AE50F1F21A2C8005084BD /* SHScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AE50D1F21A2C8005084BD /* SHScrollViewController.swift */; };
+		B93AE5101F21A2C8005084BD /* SHScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93AE50E1F21A2C8005084BD /* SHScrollViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B93AE4E01F20AE10005084BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B93AE4C31F20AE0F005084BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B93AE4CA1F20AE0F005084BD;
+			remoteInfo = SHFullscreenPopGestureSwiftDemo;
+		};
+		B93AE4EB1F20AE10005084BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B93AE4C31F20AE0F005084BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B93AE4CA1F20AE0F005084BD;
+			remoteInfo = SHFullscreenPopGestureSwiftDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B93AE4CB1F20AE0F005084BD /* SHFullscreenPopGestureSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHFullscreenPopGestureSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B93AE4CE1F20AE0F005084BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B93AE4D01F20AE0F005084BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B93AE4D31F20AE0F005084BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B93AE4D51F20AE0F005084BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B93AE4D81F20AE10005084BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B93AE4DA1F20AE10005084BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B93AE4DF1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHFullscreenPopGestureSwiftDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B93AE4E31F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHFullscreenPopGestureSwiftDemoTests.swift; sourceTree = "<group>"; };
+		B93AE4E51F20AE10005084BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B93AE4EA1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHFullscreenPopGestureSwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B93AE4EE1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHFullscreenPopGestureSwiftDemoUITests.swift; sourceTree = "<group>"; };
+		B93AE4F01F20AE10005084BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B93AE4FD1F20AE60005084BD /* SHFullscreenPopGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHFullscreenPopGesture.swift; sourceTree = "<group>"; };
+		B93AE5011F20B6A9005084BD /* SHAceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHAceViewController.swift; sourceTree = "<group>"; };
+		B93AE5021F20B6A9005084BD /* SHAceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHAceViewController.xib; sourceTree = "<group>"; };
+		B93AE5051F20BB69005084BD /* SHNoBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHNoBarViewController.swift; sourceTree = "<group>"; };
+		B93AE5061F20BB69005084BD /* SHNoBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHNoBarViewController.xib; sourceTree = "<group>"; };
+		B93AE5091F219F0D005084BD /* SHNoGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHNoGestureViewController.swift; sourceTree = "<group>"; };
+		B93AE50A1F219F0D005084BD /* SHNoGestureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHNoGestureViewController.xib; sourceTree = "<group>"; };
+		B93AE50D1F21A2C8005084BD /* SHScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHScrollViewController.swift; sourceTree = "<group>"; };
+		B93AE50E1F21A2C8005084BD /* SHScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHScrollViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B93AE4C81F20AE0F005084BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B93AE4DC1F20AE10005084BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B93AE4E71F20AE10005084BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B93AE4C21F20AE0F005084BD = {
+			isa = PBXGroup;
+			children = (
+				B93AE4CD1F20AE0F005084BD /* SHFullscreenPopGestureSwiftDemo */,
+				B93AE4E21F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoTests */,
+				B93AE4ED1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoUITests */,
+				B93AE4CC1F20AE0F005084BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B93AE4CC1F20AE0F005084BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B93AE4CB1F20AE0F005084BD /* SHFullscreenPopGestureSwiftDemo.app */,
+				B93AE4DF1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoTests.xctest */,
+				B93AE4EA1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B93AE4CD1F20AE0F005084BD /* SHFullscreenPopGestureSwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B93AE4FC1F20AE44005084BD /* SHFullscreenPopGestureSwift */,
+				B93AE4CE1F20AE0F005084BD /* AppDelegate.swift */,
+				B93AE5091F219F0D005084BD /* SHNoGestureViewController.swift */,
+				B93AE50A1F219F0D005084BD /* SHNoGestureViewController.xib */,
+				B93AE50D1F21A2C8005084BD /* SHScrollViewController.swift */,
+				B93AE50E1F21A2C8005084BD /* SHScrollViewController.xib */,
+				B93AE5051F20BB69005084BD /* SHNoBarViewController.swift */,
+				B93AE5061F20BB69005084BD /* SHNoBarViewController.xib */,
+				B93AE5011F20B6A9005084BD /* SHAceViewController.swift */,
+				B93AE5021F20B6A9005084BD /* SHAceViewController.xib */,
+				B93AE4D01F20AE0F005084BD /* ViewController.swift */,
+				B93AE4D21F20AE0F005084BD /* Main.storyboard */,
+				B93AE4D51F20AE0F005084BD /* Assets.xcassets */,
+				B93AE4D71F20AE10005084BD /* LaunchScreen.storyboard */,
+				B93AE4DA1F20AE10005084BD /* Info.plist */,
+			);
+			path = SHFullscreenPopGestureSwiftDemo;
+			sourceTree = "<group>";
+		};
+		B93AE4E21F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B93AE4E31F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoTests.swift */,
+				B93AE4E51F20AE10005084BD /* Info.plist */,
+			);
+			path = SHFullscreenPopGestureSwiftDemoTests;
+			sourceTree = "<group>";
+		};
+		B93AE4ED1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B93AE4EE1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoUITests.swift */,
+				B93AE4F01F20AE10005084BD /* Info.plist */,
+			);
+			path = SHFullscreenPopGestureSwiftDemoUITests;
+			sourceTree = "<group>";
+		};
+		B93AE4FC1F20AE44005084BD /* SHFullscreenPopGestureSwift */ = {
+			isa = PBXGroup;
+			children = (
+				B93AE4FD1F20AE60005084BD /* SHFullscreenPopGesture.swift */,
+			);
+			name = SHFullscreenPopGestureSwift;
+			path = ../../SHFullscreenPopGestureSwift;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B93AE4CA1F20AE0F005084BD /* SHFullscreenPopGestureSwiftDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B93AE4F31F20AE10005084BD /* Build configuration list for PBXNativeTarget "SHFullscreenPopGestureSwiftDemo" */;
+			buildPhases = (
+				B93AE4C71F20AE0F005084BD /* Sources */,
+				B93AE4C81F20AE0F005084BD /* Frameworks */,
+				B93AE4C91F20AE0F005084BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SHFullscreenPopGestureSwiftDemo;
+			productName = SHFullscreenPopGestureSwiftDemo;
+			productReference = B93AE4CB1F20AE0F005084BD /* SHFullscreenPopGestureSwiftDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B93AE4DE1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B93AE4F61F20AE10005084BD /* Build configuration list for PBXNativeTarget "SHFullscreenPopGestureSwiftDemoTests" */;
+			buildPhases = (
+				B93AE4DB1F20AE10005084BD /* Sources */,
+				B93AE4DC1F20AE10005084BD /* Frameworks */,
+				B93AE4DD1F20AE10005084BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B93AE4E11F20AE10005084BD /* PBXTargetDependency */,
+			);
+			name = SHFullscreenPopGestureSwiftDemoTests;
+			productName = SHFullscreenPopGestureSwiftDemoTests;
+			productReference = B93AE4DF1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B93AE4E91F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B93AE4F91F20AE10005084BD /* Build configuration list for PBXNativeTarget "SHFullscreenPopGestureSwiftDemoUITests" */;
+			buildPhases = (
+				B93AE4E61F20AE10005084BD /* Sources */,
+				B93AE4E71F20AE10005084BD /* Frameworks */,
+				B93AE4E81F20AE10005084BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B93AE4EC1F20AE10005084BD /* PBXTargetDependency */,
+			);
+			name = SHFullscreenPopGestureSwiftDemoUITests;
+			productName = SHFullscreenPopGestureSwiftDemoUITests;
+			productReference = B93AE4EA1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B93AE4C31F20AE0F005084BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SH;
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = ShowHandAce;
+				TargetAttributes = {
+					B93AE4CA1F20AE0F005084BD = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					B93AE4DE1F20AE10005084BD = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B93AE4CA1F20AE0F005084BD;
+					};
+					B93AE4E91F20AE10005084BD = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B93AE4CA1F20AE0F005084BD;
+					};
+				};
+			};
+			buildConfigurationList = B93AE4C61F20AE0F005084BD /* Build configuration list for PBXProject "SHFullscreenPopGestureSwiftDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B93AE4C21F20AE0F005084BD;
+			productRefGroup = B93AE4CC1F20AE0F005084BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B93AE4CA1F20AE0F005084BD /* SHFullscreenPopGestureSwiftDemo */,
+				B93AE4DE1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoTests */,
+				B93AE4E91F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B93AE4C91F20AE0F005084BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B93AE4D91F20AE10005084BD /* LaunchScreen.storyboard in Resources */,
+				B93AE4D61F20AE10005084BD /* Assets.xcassets in Resources */,
+				B93AE50C1F219F0D005084BD /* SHNoGestureViewController.xib in Resources */,
+				B93AE5101F21A2C8005084BD /* SHScrollViewController.xib in Resources */,
+				B93AE4D41F20AE0F005084BD /* Main.storyboard in Resources */,
+				B93AE5081F20BB69005084BD /* SHNoBarViewController.xib in Resources */,
+				B93AE5041F20B6A9005084BD /* SHAceViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B93AE4DD1F20AE10005084BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B93AE4E81F20AE10005084BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B93AE4C71F20AE0F005084BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B93AE50B1F219F0D005084BD /* SHNoGestureViewController.swift in Sources */,
+				B93AE4FE1F20AE60005084BD /* SHFullscreenPopGesture.swift in Sources */,
+				B93AE5071F20BB69005084BD /* SHNoBarViewController.swift in Sources */,
+				B93AE50F1F21A2C8005084BD /* SHScrollViewController.swift in Sources */,
+				B93AE4D11F20AE0F005084BD /* ViewController.swift in Sources */,
+				B93AE4CF1F20AE0F005084BD /* AppDelegate.swift in Sources */,
+				B93AE5031F20B6A9005084BD /* SHAceViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B93AE4DB1F20AE10005084BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B93AE4E41F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B93AE4E61F20AE10005084BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B93AE4EF1F20AE10005084BD /* SHFullscreenPopGestureSwiftDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B93AE4E11F20AE10005084BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B93AE4CA1F20AE0F005084BD /* SHFullscreenPopGestureSwiftDemo */;
+			targetProxy = B93AE4E01F20AE10005084BD /* PBXContainerItemProxy */;
+		};
+		B93AE4EC1F20AE10005084BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B93AE4CA1F20AE0F005084BD /* SHFullscreenPopGestureSwiftDemo */;
+			targetProxy = B93AE4EB1F20AE10005084BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B93AE4D21F20AE0F005084BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B93AE4D31F20AE0F005084BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B93AE4D71F20AE10005084BD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B93AE4D81F20AE10005084BD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B93AE4F11F20AE10005084BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B93AE4F21F20AE10005084BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B93AE4F41F20AE10005084BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SHFullscreenPopGestureSwiftDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShowHandAce.SHFullscreenPopGestureSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B93AE4F51F20AE10005084BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SHFullscreenPopGestureSwiftDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShowHandAce.SHFullscreenPopGestureSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B93AE4F71F20AE10005084BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SHFullscreenPopGestureSwiftDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShowHandAce.SHFullscreenPopGestureSwiftDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SHFullscreenPopGestureSwiftDemo.app/SHFullscreenPopGestureSwiftDemo";
+			};
+			name = Debug;
+		};
+		B93AE4F81F20AE10005084BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SHFullscreenPopGestureSwiftDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShowHandAce.SHFullscreenPopGestureSwiftDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SHFullscreenPopGestureSwiftDemo.app/SHFullscreenPopGestureSwiftDemo";
+			};
+			name = Release;
+		};
+		B93AE4FA1F20AE10005084BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SHFullscreenPopGestureSwiftDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShowHandAce.SHFullscreenPopGestureSwiftDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SHFullscreenPopGestureSwiftDemo;
+			};
+			name = Debug;
+		};
+		B93AE4FB1F20AE10005084BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SHFullscreenPopGestureSwiftDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShowHandAce.SHFullscreenPopGestureSwiftDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SHFullscreenPopGestureSwiftDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B93AE4C61F20AE0F005084BD /* Build configuration list for PBXProject "SHFullscreenPopGestureSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B93AE4F11F20AE10005084BD /* Debug */,
+				B93AE4F21F20AE10005084BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B93AE4F31F20AE10005084BD /* Build configuration list for PBXNativeTarget "SHFullscreenPopGestureSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B93AE4F41F20AE10005084BD /* Debug */,
+				B93AE4F51F20AE10005084BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B93AE4F61F20AE10005084BD /* Build configuration list for PBXNativeTarget "SHFullscreenPopGestureSwiftDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B93AE4F71F20AE10005084BD /* Debug */,
+				B93AE4F81F20AE10005084BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B93AE4F91F20AE10005084BD /* Build configuration list for PBXNativeTarget "SHFullscreenPopGestureSwiftDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B93AE4FA1F20AE10005084BD /* Debug */,
+				B93AE4FB1F20AE10005084BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B93AE4C31F20AE0F005084BD /* Project object */;
+}
