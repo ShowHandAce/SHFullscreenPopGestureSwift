@@ -15,5 +15,10 @@ scrollView.sh_scrollViewPopGestureRecognizerEnable = true
 
 其余使用方法与 **FDFullScreenPopGesture** 一致.
 
+# CocoaPods 安装
+``` ruby
+pod 'SHFullscreenPopGestureSwift', '~> 1.0'
+```
+
 # License  
 MIT
