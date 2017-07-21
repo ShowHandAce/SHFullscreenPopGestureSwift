@@ -84,7 +84,7 @@ extension UINavigationController {
     }
     
     /// The gesture recognizer that actually handles interactive pop.
-    var sh_fullscreenPopGestureRecognizer: UIPanGestureRecognizer {
+    public var sh_fullscreenPopGestureRecognizer: UIPanGestureRecognizer {
         guard let pan = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_fullscreenPopGestureRecognizer) as? UIPanGestureRecognizer else {
             let panGesture = UIPanGestureRecognizer()
             panGesture.maximumNumberOfTouches = 1;
@@ -98,7 +98,7 @@ extension UINavigationController {
     /// A view controller is able to control navigation bar's appearance by itself,
     /// rather than a global way, checking "fd_prefersNavigationBarHidden" property.
     /// Default to true, disable it if you don't want so.
-    var sh_viewControllerBasedNavigationBarAppearanceEnabled: Bool {
+    public var sh_viewControllerBasedNavigationBarAppearanceEnabled: Bool {
         get {
             guard let bools = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_viewControllerBasedNavigationBarAppearanceEnabled) as? Bool else {
                 self.sh_viewControllerBasedNavigationBarAppearanceEnabled = true
@@ -151,7 +151,7 @@ extension UIViewController {
     }
     
     /// Whether the interactive pop gesture is disabled when contained in a navigation stack.
-    var sh_interactivePopDisabled: Bool {
+    public var sh_interactivePopDisabled: Bool {
         get {
             guard let bools = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopDisabled) as? Bool else {
                 return false
@@ -166,7 +166,7 @@ extension UIViewController {
     /// Indicate this view controller prefers its navigation bar hidden or not,
     /// checked when view controller based navigation bar's appearance is enabled.
     /// Default to false, bars are more likely to show.
-    var sh_prefersNavigationBarHidden: Bool {
+    public var sh_prefersNavigationBarHidden: Bool {
         get {
             guard let bools = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_prefersNavigationBarHidden) as? Bool else {
                 return false
@@ -180,7 +180,7 @@ extension UIViewController {
     
     /// Max allowed initial distance to left edge when you begin the interactive pop
     /// gesture. 0 by default, which means it will ignore this limit.
-    var sh_interactivePopMaxAllowedInitialDistanceToLeftEdge: Double {
+    public var sh_interactivePopMaxAllowedInitialDistanceToLeftEdge: Double {
         get {
             guard let doubleNum = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopMaxAllowedInitialDistanceToLeftEdge) as? Double else {
                 return 0.0
@@ -266,7 +266,7 @@ fileprivate struct RuntimeKey {
 
 extension UIScrollView: UIGestureRecognizerDelegate {
     
-    var sh_scrollViewPopGestureRecognizerEnable: Bool {
+    public var sh_scrollViewPopGestureRecognizerEnable: Bool {
         get {
             guard let bools = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_scrollViewPopGestureRecognizerEnable) as? Bool else {
                 return false
