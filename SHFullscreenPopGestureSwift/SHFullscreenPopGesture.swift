@@ -13,7 +13,7 @@
 
 import UIKit
 
-class SHFullscreenPopGesture {
+open class SHFullscreenPopGesture {
     
     open class func configure() {
         
