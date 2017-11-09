@@ -10,7 +10,7 @@ import UIKit
 
 class SHScrollViewController: UIViewController {
     
-//    private lazy var scrollView = UIScrollView()
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var imgView: UIImageView!
     
@@ -22,7 +22,7 @@ class SHScrollViewController: UIViewController {
         self.navigationItem.title = "Scroll"
         
         //设置 sh_scrollViewPopGestureRecognizerEnable 属性为 true 可以让 scrollView 的控制器具有左滑返回手势
-//        self.scrollView.sh_scrollViewPopGestureRecognizerEnable = true
+        self.scrollView.sh_scrollViewPopGestureRecognizerEnable = true
         
         self.imgView.image = UIImage(named: "ACE")?.resizableImage(withCapInsets: .zero, resizingMode: .tile)
     }

@@ -13,26 +13,45 @@
 
 import UIKit
 
+class SHFullscreenPopGesture {
+    
+    open class func configure() {
+        
+        UINavigationController.sh_nav_initialize()
+        UIViewController.sh_initialize()
+    }
+    
+}
+
 extension UINavigationController {
     
     private var sh_popGestureRecognizerDelegate: _SHFullscreenPopGestureRecognizerDelegate {
-        guard let delegate = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_popGestureRecognizerDelegate) as? _SHFullscreenPopGestureRecognizerDelegate else {
+        guard let delegate = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_popGestureRecognizerDelegate!) as? _SHFullscreenPopGestureRecognizerDelegate else {
             let popDelegate = _SHFullscreenPopGestureRecognizerDelegate()
             popDelegate.navigationController = self
-            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_popGestureRecognizerDelegate, popDelegate, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_popGestureRecognizerDelegate!, popDelegate, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             return popDelegate
         }
         return delegate
     }
     
-    override open class func initialize() {
+    open class func sh_nav_initialize() {
         // Inject "-pushViewController:animated:"
         DispatchQueue.once(token: "com.UINavigationController.MethodSwizzling", block: {
             let originalMethod = class_getInstanceMethod(self, #selector(pushViewController(_:animated:)))
             let swizzledMethod = class_getInstanceMethod(self, #selector(sh_pushViewController(_:animated:)))
-            method_exchangeImplementations(originalMethod, swizzledMethod)
+            method_exchangeImplementations(originalMethod!, swizzledMethod!)
         })
     }
+    
+//    override open class func initialize() {
+//        // Inject "-pushViewController:animated:"
+//        DispatchQueue.once(token: "com.UINavigationController.MethodSwizzling", block: {
+//            let originalMethod = class_getInstanceMethod(self, #selector(pushViewController(_:animated:)))
+//            let swizzledMethod = class_getInstanceMethod(self, #selector(sh_pushViewController(_:animated:)))
+//            method_exchangeImplementations(originalMethod!, swizzledMethod!)
+//        })
+//    }
     
     @objc private func sh_pushViewController(_ viewController: UIViewController, animated: Bool) {
         
@@ -85,10 +104,10 @@ extension UINavigationController {
     
     /// The gesture recognizer that actually handles interactive pop.
     public var sh_fullscreenPopGestureRecognizer: UIPanGestureRecognizer {
-        guard let pan = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_fullscreenPopGestureRecognizer) as? UIPanGestureRecognizer else {
+        guard let pan = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_fullscreenPopGestureRecognizer!) as? UIPanGestureRecognizer else {
             let panGesture = UIPanGestureRecognizer()
             panGesture.maximumNumberOfTouches = 1;
-            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_fullscreenPopGestureRecognizer, panGesture, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_fullscreenPopGestureRecognizer!, panGesture, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             
             return panGesture
         }
@@ -100,14 +119,14 @@ extension UINavigationController {
     /// Default to true, disable it if you don't want so.
     public var sh_viewControllerBasedNavigationBarAppearanceEnabled: Bool {
         get {
-            guard let bools = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_viewControllerBasedNavigationBarAppearanceEnabled) as? Bool else {
+            guard let bools = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_viewControllerBasedNavigationBarAppearanceEnabled!) as? Bool else {
                 self.sh_viewControllerBasedNavigationBarAppearanceEnabled = true
                 return true
             }
             return bools
         }
         set {
-            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_viewControllerBasedNavigationBarAppearanceEnabled, newValue, .OBJC_ASSOCIATION_ASSIGN)
+            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_viewControllerBasedNavigationBarAppearanceEnabled!, newValue, .OBJC_ASSOCIATION_ASSIGN)
         }
     }
 }
@@ -125,21 +144,30 @@ extension UIViewController {
     
     fileprivate var sh_willAppearInjectBlockContainer: _SHViewControllerWillAppearInjectBlockContainer? {
         get {
-            return objc_getAssociatedObject(self, RuntimeKey.KEY_sh_willAppearInjectBlockContainer) as? _SHViewControllerWillAppearInjectBlockContainer
+            return objc_getAssociatedObject(self, RuntimeKey.KEY_sh_willAppearInjectBlockContainer!) as? _SHViewControllerWillAppearInjectBlockContainer
         }
         set {
-            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_willAppearInjectBlockContainer, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_willAppearInjectBlockContainer!, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
-    override open class func initialize() {
+    open class func sh_initialize() {
         
         DispatchQueue.once(token: "com.UIViewController.MethodSwizzling", block: {
             let originalMethod = class_getInstanceMethod(self, #selector(viewWillAppear(_:)))
             let swizzledMethod = class_getInstanceMethod(self, #selector(sh_viewWillAppear(_:)))
-            method_exchangeImplementations(originalMethod, swizzledMethod)
+            method_exchangeImplementations(originalMethod!, swizzledMethod!)
         })
     }
+    
+//    override open class func initialize() {
+//
+//        DispatchQueue.once(token: "com.UIViewController.MethodSwizzling", block: {
+//            let originalMethod = class_getInstanceMethod(self, #selector(viewWillAppear(_:)))
+//            let swizzledMethod = class_getInstanceMethod(self, #selector(sh_viewWillAppear(_:)))
+//            method_exchangeImplementations(originalMethod!, swizzledMethod!)
+//        })
+//    }
     
     @objc private func sh_viewWillAppear(_ animated: Bool) {
         // Forward to primary implementation.
@@ -153,13 +181,13 @@ extension UIViewController {
     /// Whether the interactive pop gesture is disabled when contained in a navigation stack.
     public var sh_interactivePopDisabled: Bool {
         get {
-            guard let bools = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopDisabled) as? Bool else {
+            guard let bools = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopDisabled!) as? Bool else {
                 return false
             }
             return bools
         }
         set {
-            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopDisabled, newValue, .OBJC_ASSOCIATION_ASSIGN)
+            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopDisabled!, newValue, .OBJC_ASSOCIATION_ASSIGN)
         }
     }
     
@@ -168,13 +196,13 @@ extension UIViewController {
     /// Default to false, bars are more likely to show.
     public var sh_prefersNavigationBarHidden: Bool {
         get {
-            guard let bools = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_prefersNavigationBarHidden) as? Bool else {
+            guard let bools = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_prefersNavigationBarHidden!) as? Bool else {
                 return false
             }
             return bools
         }
         set {
-            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_prefersNavigationBarHidden, newValue, .OBJC_ASSOCIATION_ASSIGN)
+            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_prefersNavigationBarHidden!, newValue, .OBJC_ASSOCIATION_ASSIGN)
         }
     }
     
@@ -182,13 +210,13 @@ extension UIViewController {
     /// gesture. 0 by default, which means it will ignore this limit.
     public var sh_interactivePopMaxAllowedInitialDistanceToLeftEdge: Double {
         get {
-            guard let doubleNum = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopMaxAllowedInitialDistanceToLeftEdge) as? Double else {
+            guard let doubleNum = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopMaxAllowedInitialDistanceToLeftEdge!) as? Double else {
                 return 0.0
             }
             return doubleNum
         }
         set {
-            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopMaxAllowedInitialDistanceToLeftEdge, newValue, .OBJC_ASSOCIATION_COPY)
+            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopMaxAllowedInitialDistanceToLeftEdge!, newValue, .OBJC_ASSOCIATION_COPY)
         }
     }
 }
@@ -268,13 +296,13 @@ extension UIScrollView: UIGestureRecognizerDelegate {
     
     public var sh_scrollViewPopGestureRecognizerEnable: Bool {
         get {
-            guard let bools = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_scrollViewPopGestureRecognizerEnable) as? Bool else {
+            guard let bools = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_scrollViewPopGestureRecognizerEnable!) as? Bool else {
                 return false
             }
             return bools
         }
         set {
-            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_scrollViewPopGestureRecognizerEnable, newValue, .OBJC_ASSOCIATION_ASSIGN)
+            objc_setAssociatedObject(self, RuntimeKey.KEY_sh_scrollViewPopGestureRecognizerEnable!, newValue, .OBJC_ASSOCIATION_ASSIGN)
         }
     }
     
